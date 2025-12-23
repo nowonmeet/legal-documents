@@ -1,0 +1,83 @@
+# Jekyll Configuration for Death Clock Legal Pages
+
+# Site settings
+title: "寿命時計 - Legal"
+description: "寿命時計アプリの利用規約・プライバシーポリシー"
+url: "https://nowonmeet.github.io"
+baseurl: "/death_clock_legal/GitHub_Pages"
+
+# Theme
+theme: minima
+# remote_theme: pages-themes/midnight@v0.2.0
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO settings
+author: "寿命時計 Team"
+twitter:
+  username: death_clock_app
+  card: summary
+
+# Page settings
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Navigation
+header_pages:
+  - privacy-policy.md
+  - terms-of-service.md
+
+# Custom styling for dark theme (matching app design)
+sass:
+  style: compressed
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+  - templates/
+
+# Include files
+include:
+  - assets/
+
+# Collections
+collections:
+  legal:
+    output: true
+    permalink: /:collection/:name/
+
+# Site metadata
+lang: ja
+timezone: Asia/Tokyo
+
+# Custom variables for Death Clock branding
+brand:
+  name: "寿命時計"
+  tagline: "あなたの健康習慣から予測される寿命を知り、より良い未来へ"
+  colors:
+    primary: "#ff0000"
+    background: "#000000"
+    text: "#ffffff"
